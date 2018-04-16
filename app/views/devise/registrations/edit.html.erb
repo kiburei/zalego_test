@@ -4,6 +4,22 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.text_field :f_name, placeholder: current_user.f_name %>
+  </div>
+  <div class="field">
+    <%= f.text_field :l_name, placeholder: current_user.l_name %>
+  </div>
+  <div class="field">
+    <%= f.text_field :gender, placeholder: current_user.gender %>
+  </div>
+  <div class="field">
+    <%= f.text_field :language, placeholder: current_user.language %>
+  </div>
+  <div class="field">
+    <%= f.text_field :username, placeholder: current_user.username %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
