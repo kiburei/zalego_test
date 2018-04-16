@@ -1,5 +1,8 @@
-<%= @user.username %><br />
-<%= @user.f_name %><br />
-<%= @user.l_name %><br />
+<div style="padding: 50px">
+  Username: <%= @user.username %><br />
+  Full Name: <%= @user.f_name %> <%= @user.l_name %><br />
+  Language: <%= @user.language %><br />
 
-<%= link_to 'Edit Profile', edit_user_registration_path %>
+  <%= link_to 'Edit Profile', edit_user_registration_path %>
+
+</div>

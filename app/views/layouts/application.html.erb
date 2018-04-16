@@ -7,10 +7,18 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <nav class="nav">
+  <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <nav class="nav-wrapper">
     <% if user_signed_in? %>
-      <%= link_to 'profile', user_path(current_user)  %>
-      <%= link_to 'logout', destroy_user_session_path, :method => :delete %>
+      <%= link_to 'profile', user_path(current_user), class: 'brand-logo'  %>
+      <ul class="right">
+        <li><%= link_to 'logout', destroy_user_session_path, :method => :delete %></li>
+      </ul>
     <% end %>
   </nav>
   <body>
