@@ -8,6 +8,9 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     welcome_index_path
   end
+  def after_confirmation_path_for(resource_name, resource)
+    welcome_index_path
+  end
 
 
  protected
